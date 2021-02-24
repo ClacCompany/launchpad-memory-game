@@ -16,7 +16,8 @@ class LaunchpadPro(LpPro):
     def __init__(self, number=0, name="pad pro"):
         super().__init__()
         super().Open(number, name)
-        super().ButtonFlush()
+        if super().Check(0):
+            super().ButtonFlush()
         atexit.register(self.__on_exit__)
         self.continue_listener = True
         self.listener_thread = Thread(target=self.__start_listener__)
