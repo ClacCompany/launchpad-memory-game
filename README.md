@@ -19,4 +19,8 @@ How to install:
 1. Download & install the USB Drivers and make sure your Launchpad is up-to-date (https://resource.novationmusic.com/support/product-downloads)
 2. Download & extract the game 
 3. Run ___setup.bat___ or ___setup.sh___ according to your system __or__ install all dependencies.
-4. Run ___\_\_main\_\_.py___ in the ___launchpad-game___ folder
+4. What Launchpad do you have?
+   -> Pro:
+          Run ___startPro.py___
+   -> Mk2:
+          Run ___startMk2.py___
