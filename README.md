@@ -6,7 +6,7 @@ Currently supported Launchpads:
 - Launchpad Mk2
 
 Currently in work:
-- Improved Level Editor
+- Levels
 
 Dependencies:
 - launchpad_py
