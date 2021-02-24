@@ -3,7 +3,7 @@ import random
 
 import keyboard
 
-from pylaunchpad import Wrapper
+import LaunchpadMk2, LaunchpadPro
 
 
 class Editor:
@@ -11,7 +11,7 @@ class Editor:
         self.colors = [[255, 0, 0], [255, 148, 3], [255, 247, 3], [0, 255, 0], [0, 255, 255], [0, 0, 255],
                        [128, 0, 255],
                        [255, 0, 255]]
-        self.lp = Wrapper.LaunchpadPro()
+        self.lp = LaunchpadPro()
         self.lp.Reset()
         self.press = []
         self.color = []
