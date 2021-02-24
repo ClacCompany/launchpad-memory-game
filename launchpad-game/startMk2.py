@@ -1,18 +1,19 @@
-from LaunchpadMk2 import LauchpadMk2
-import playsound
+import LaunchpadMk2
+from playsound import playsound
 import atexit
 import time
 import json
 import os
+from threading import Thread
 
 
 def on_exit():
-    os.system(f"python \"{os.path.dirname(__file__)}\"")
+    os.system(f"python {os.getcwd()}/startMk2.py")
 
 
 class Game:
     def __init__(self):
-        self.lp = LaunchpadMk2()
+        self.lp = LaunchpadMk2.LaunchpadMk2()
         self.lp.Reset()
         self.lp.register_on_button_press(on_button=self.on_button_press)
         self.press = []
@@ -36,7 +37,7 @@ class Game:
                 self.on_death()
         self.cur_level += 1
         self.press = []
-        playsound.playsound("win.wav")
+        Thread(target=playsound, args=("sounds/win.wav",)).start()
         if self.cur_level + 1 > len(self.levels):
             self.on_win()
         else:
@@ -53,7 +54,7 @@ class Game:
             self.lp.LedCtrlXY(x, y, 0, 255, 0)
             self.press.append([x, y])
             if self.levels[self.cur_level]["pos"][-1] != [x, y]:
-                playsound.playsound("correct.wav")
+                Thread(target=playsound, args=("sounds/correct.wav",)).start()
 
     def on_win(self):
         self.lp.Reset()
