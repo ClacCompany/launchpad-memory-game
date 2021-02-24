@@ -1,5 +1,5 @@
-from pylaunchpad import Wrapper
 from threading import Thread
+import Launchpad
 import playsound
 import atexit
 import time
@@ -17,7 +17,7 @@ def play_sound(fname: str):
 
 class Game:
     def __init__(self):
-        self.lp = Wrapper.LaunchpadPro()
+        self.lp = Launchpad.LaunchpadPro()
         self.lp.Reset()
         self.lp.register_on_button_press(on_button=self.on_button_press)
         self.press = []
