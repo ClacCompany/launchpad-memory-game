@@ -1,5 +1,4 @@
 # Launchpad Memory Game
-![example workflow](https://github.com/Shanox17/launchpad-memory-game/actions/workflows/python-app.yml/badge.svg)
 
 Currently supported Launchpads:
 - Launchpad Pro
