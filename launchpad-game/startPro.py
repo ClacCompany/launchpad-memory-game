@@ -1,4 +1,4 @@
-import LaunchpadMk2
+import LaunchpadPro
 from playsound import playsound
 import atexit
 import time
@@ -8,12 +8,12 @@ from threading import Thread
 
 
 def on_exit():
-    os.system(f"python {os.getcwd()}/startMk2.py")
+    os.system(f"python {os.getcwd()}/startPro.py")
 
 
 class Game:
     def __init__(self):
-        self.lp = LaunchpadMk2.LaunchpadMk2()
+        self.lp = LaunchpadPro.LaunchpadPro()
         self.lp.Reset()
         self.lp.register_on_button_press(on_button=self.on_button_press)
         self.press = []
@@ -44,6 +44,7 @@ class Game:
             self.next_level()
 
     def on_button_press(self, x, y, pres):
+        x = x - 1
         if pres > 0:
             if self.levels[self.cur_level]["pos"][len(self.press)] != [x, y]:
                 self.isDead = True
