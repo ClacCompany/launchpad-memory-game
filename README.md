@@ -1,2 +1,5 @@
-# launchpad-memory-game
-Remember the order!
+# Launchpad Memory Game
+
+Currently supported Launchpads:
+- Launchpad Pro
+- Launchpad Mk2
