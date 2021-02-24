@@ -35,7 +35,7 @@ class Editor:
 
     def on_button_press(self, x, y, pres):
         if [x, y] not in self.press and pres > 0:
-            self.lp.LedCtrlXYByCode(x - 1, y, 0)
+            self.lp.LedCtrlXYByCode(x, y, 0)
             self.press.append([x, y])
 
 
