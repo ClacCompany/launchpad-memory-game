@@ -3,6 +3,10 @@
 Currently supported Launchpads:
 - Launchpad Pro
 
+Currently in work:
+- Support for Launchpad Mk2
+- Improved Level Editor
+
 Dependencies:
 - launchpad_py
 - opencv-python
