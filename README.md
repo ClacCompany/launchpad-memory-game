@@ -2,6 +2,7 @@
 
 Currently supported Launchpads:
 - Launchpad Pro
+- Launchpad Pro MK3
 
 Currently in work:
 - Support for Launchpad Mk2
