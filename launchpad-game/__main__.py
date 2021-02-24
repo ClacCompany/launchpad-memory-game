@@ -43,7 +43,7 @@ class Game:
                 self.on_death()
         self.cur_level += 1
         self.press = []
-        Thread(target=play_sound, args=("win.wav",)).start()
+        Thread(target=play_sound, args=("sounds/win.wav",)).start()
         if self.cur_level + 1 > len(self.levels):
             self.can_gameover = False
             self.on_win()
@@ -63,7 +63,7 @@ class Game:
                 self.lp.LedCtrlXY(x - 1, y, 0, 255, 0)
                 self.press.append([x, y])
                 if self.levels[self.cur_level]["pos"][-1] != [x, y]:
-                    Thread(target=play_sound, args=("correct.wav",)).start()
+                    Thread(target=play_sound, args=("sounds/correct.wav",)).start()
 
     def on_win(self):
         self.lp.Reset()
