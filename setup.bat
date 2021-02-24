@@ -7,3 +7,5 @@ pip install opencv-python
 pip install playsound
 pip install keyboard
 echo Finished!
+:end
+goto end
