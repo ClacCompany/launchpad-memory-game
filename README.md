@@ -5,7 +5,6 @@ Currently supported Launchpads:
 
 Currently in work:
 - Support for Launchpad Mk2
-- Support for Launchpad Pro MK3 (can't be tested)
 - Improved Level Editor
 
 Dependencies:
