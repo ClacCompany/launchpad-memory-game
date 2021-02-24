@@ -12,5 +12,5 @@ Dependencies:
 
 How to install:
 1. Download & install the USB Drivers and make sure your Launchpad is up-to-date (https://resource.novationmusic.com/support/product-downloads)
-2. Download the game and run setup.cmd or setup.sh according to your system
+2. Download the game and run setup.bat or setup.sh according to your system __or__ install all dependencies.
 3. Run \_\_main\_\_.py 
